@@ -1,0 +1,16 @@
+taxyear: 2022
+scenarios:
+  FTC5a42.7k25: Increase the Family Tax Credit (FTC) rate for the eldest child by 5
+                  dollars per week, maintain the current abatement threshold at
+                  42,700 dollars, and keep the abatement rate at 25% 
+  FTC5a42.7k26: Increase FTC rate by 5 dollars per week and increase abatement 
+                  rate to 26%
+  FTC5a42.7k27: Increase FTC rate by 5 dollars per week and increase abatement 
+                  rate to 27%
+  FTC7.5a42.7k27: Increase FTC rate by 7.5 dollars per week and increase 
+                  abatement rate to 27%
+  FTC7.5a42.7k28: Increase FTC rate by 7.5 dollars per week and increase
+                  abatement rate to 28%
+
+                  
+  

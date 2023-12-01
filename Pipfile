@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aipy = {file = "file:///C:/Users/DavisC/sandpit/aipy"}
+pandas = "*"
+openai = "==0.28"
+prettytable = "*"
+tinydb = "*"
+jinja2 = "*"
+pyaml = "*"
+tiktoken = "*"
+
+[dev-packages]
+ipykernel = "*"
+
+[requires]
+python_version = "3.11"
