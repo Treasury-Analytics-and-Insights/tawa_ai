@@ -104,18 +104,28 @@ suppressed for confidentiality.
 
 
 The following table describes the change in the number of children living
-in two income based measures of poverty:  The fixed-line after housing costs AHC50 (Fixed_AHC), and the moving-line 
-before housing costs BHC50 (BHC) poverty measures.
+in two income based measures of poverty:  The fixed-line after housing costs (AHC50), 
+and the moving-line before housing costs (BHC50) poverty measures.
 
-Poverty_Type      BHC Fixed_AHC
-Scenario                       
-FTC5a42.7k25    -5000     -9000
-FTC5a42.7k26    -5000     -9000
-FTC5a42.7k27    -5000     -8000
-FTC7.5a42.7k27  -7000    -11000
-FTC7.5a42.7k28  -7000    -10000
+Fixed-line AHC50 child poverty impacts:
+      Scenario  Value Margin_Of_Error
+  FTC5a42.7k25  -9000            6000
+  FTC5a42.7k26  -9000            6000
+  FTC5a42.7k27  -8000            6000
+FTC7.5a42.7k27 -11000            6000
+FTC7.5a42.7k28 -10000            6000
 
+Moving-line BHC50 child poverty impacts:
+      Scenario Value Margin_Of_Error
+  FTC5a42.7k25 -5000            4000
+  FTC5a42.7k26 -5000            4000
+  FTC5a42.7k27 -5000            3000
+FTC7.5a42.7k27 -7000            5000
+FTC7.5a42.7k28 -7000            5000
 
+The Margin_Of_Error column gives the 95% confidence interval for the change in 
+the number of children in poverty, please consider these when referring to the
+values in these tables.
 
 -----------------------------------------
 
@@ -123,7 +133,11 @@ From a value for money perspective, which reform best supports low income househ
 
 -----------------------------------------
 
-The best reform to support low income households from a value for money perspective appears to be FTC7.5a42.7k27. This is because it has the second highest fiscal cost of 145 million dollars but is noticeably more effective at reducing poverty. It reduces BHC by 7000 and AHC50 Fixed by 11000, which are the highest reductions among all reforms. It also leads to the highest mean weekly increase for the poorest households (16 dollars for 1st quantile) while only slightly causing losers in the higher quantiles. Its overall mean weekly change is also quite high at 2 dollars. So it seems to provide the most substantial support for lower-income groups with relatively considerable cost.
+The "FTC5a42.7k27" reform provides the best value for money in supporting low-income households. This reform increases the Family Tax Credit (FTC) rate by 5 dollars per week and increases the abatement rate to 27%. It also costs 68 million dollars, considerably less than all other reforms.
+
+For deciles 1 to 3 of equivalised disposable income (the lowest income households), winners from this reform experience weekly income increases of 10, 9, and 8 dollars respectively. Some households (particularly in deciles 3) do lose from this reform, but the mean weekly change for all households in these deciles remains positive. 
+
+Moreover, this reform reduces both fixed-line AHC50 and moving-line BHC50 child poverty measures by 8000 and 5000 children respectively, considering the margins of error. This is a considerable achievement given the lower fiscal cost.
 
 -----------------------------------------
 
@@ -131,4 +145,10 @@ which reform is the most tightly targeted to low incomes?
 
 -----------------------------------------
 
-The reform that appears to be most tightly targeted to low incomes is FTC5a42.7k27. The mean weekly income change for winning households in quantile 1 (lowest income) is 10 dollars and it gradually decreases to 5 dollars for quantile 6. This reform also starts introducing losers from quantile 3 onwards with the losers mean weekly change incrementally worsening as we move up income quantiles. The fiscal cost of this reform is also significantly lower at 68 million dollars. This indicates that this reform is offering a more focused support to lower-income households while also drawing back support from higher-income ones. Therefore, it could be seen as more tightly targeted to low incomes.
+The "FTC5a42.7k27" reform is the most tightly targeted to low incomes. 
+
+For the first three deciles of equivalised disposable income (the lowest income groups), this reform provides weekly income increases of 10, 9, and 8 dollars respectively. This implies that the most substantial gains are seen by the lower-income households, thereby indicating that this reform is directed tightly at this income group.
+
+However, this reform also results in more losers amongst these initial deciles compared to the other reforms, with households in the third decile losing on average 5 dollars a week. By the fourth decile, the number of households losing from this reform exceeds those gaining and the weekly losses also grow larger, indicating that this reform targets support below this level.
+
+This reform reduces child poverty, measured by the fixed-line AHC50 and moving-line BHC50 definitions, by 8000 and 5000 children respectively, considering the margins of error. Again, this shows the reform is effective in targeting low-income households with children.

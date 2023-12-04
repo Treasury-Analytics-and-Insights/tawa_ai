@@ -28,9 +28,15 @@ suppressed for confidentiality.
 {% endfor %}
 
 The following table describes the change in the number of children living
-in two income based measures of poverty:  The fixed-line after housing costs AHC50 (Fixed_AHC), and the moving-line 
-before housing costs BHC50 (BHC) poverty measures.
+in two income based measures of poverty:  The fixed-line after housing costs (AHC50), 
+and the moving-line before housing costs (BHC50) poverty measures.
 
-{{ poverty_wide.to_string(index=True) }}
+Fixed-line AHC50 child poverty impacts:
+{{ poverty[poverty.Poverty_Type=="Fixed_AHC"].drop('Poverty_Type', axis=1).to_string(index=False) }}
 
+Moving-line BHC50 child poverty impacts:
+{{ poverty[poverty.Poverty_Type=="BHC"].drop('Poverty_Type', axis=1).to_string(index=False) }}
 
+The Margin_Of_Error column gives the 95% confidence interval for the change in 
+the number of children in poverty, please consider these when referring to the
+values in these tables.
