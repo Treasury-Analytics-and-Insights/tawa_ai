@@ -1,0 +1,43 @@
+I'm using PolicyEngine, a free, open source tool to compute the impact of public policy. I'm writing up an economic analysis of a hypothetical tax-benefit policy reform. Please write the analysis for me using the details below, in their order. You should:
+  
+  * First explain each provision of the reform, noting that it's hypothetical and won't represents policy reforms for 2023 and the US. Explain how the parameters are changing from the baseline to the reform values using the given data.
+  * Round large numbers like: $3.1 billion, $300 million, $106,000, $1.50 (never $1.5).
+  * Round percentages to one decimal place.
+  * Avoid normative language like 'requires', 'should', 'must', and use quantitative statements over general adjectives and adverbs. If you don't know what something is, don't make it up.
+  * Avoid speculating about the intent of the policy or inferring any motives; only describe the observable effects and impacts of the policy. Refrain from using subjective language or making assumptions about the recipients and their needs.
+  * Use the active voice where possible; for example, write phrases where the reform is the subject, such as "the reform [or a description of the reform] reduces poverty by x%".
+  * Use American English spelling and grammar.
+  * Cite PolicyEngine US v0.540.0 and the 2021 Current Population Survey March Supplement microdata when describing policy impacts.
+  * When describing poverty impacts, note that the poverty measure reported is the Supplemental Poverty Measure.
+  * Don't use headers, but do use Markdown formatting. Use - for bullets, and include a newline after each bullet.
+  * Include the following embeds inline, without a header so it flows.
+  * Immediately after you describe the changes by decile, include the text: {{decileRelativeImpact}}
+  * And after the poverty rate changes, include the text: {{povertyImpact}}
+  * After the racial breakdown of poverty rate changes, include the text: {{racialPovertyImpact}}
+  * And after the inequality changes, include the text: {{inequalityImpact}}
+  * Make sure to accurately represent the changes observed in the data.
+
+  This JSON snippet describes the default parameter values: [{"gov.irs.income.bracket.rates.3":0.22}]
+
+  This JSON snippet describes the baseline and reform policies being compared: {"baseline":{"data":{},"label":"Current law","id":"2"},"reform":{"data":{"gov.irs.income.bracket.rates.3":{"2023-01-01.2028-12-31":0.3}},"label":null,"id":"38905"}}
+Policy #38905 has the following impacts from the PolicyEngine microsimulation model: 
+
+  This JSON snippet describes the relevant parameters with more details: [{"description":null,"economy":true,"household":true,"label":"3","parameter":"gov.irs.income.bracket.rates.3","period":null,"type":"parameter","unit":"/1","values":{"2018-01-01":0.22}}]
+
+  This JSON describes the total budgetary impact, the change to tax revenues and benefit spending (ignore 'households' and 'baseline_net_income': {"baseline_net_income":11053867450973.14,"benefit_spending_impact":0,"budgetary_impact":170516473684.76172,"households":131660909.08093262,"state_tax_revenue_impact":0,"tax_revenue_impact":170516478062.78467}
+
+  This JSON describes how common different outcomes were at each income decile: {"all":{"Gain less than 5%":0,"Gain more than 5%":0,"Lose less than 5%":0.17984464825195046,"Lose more than 5%":0.18001524705748792,"No change":0.6401401046905616},"deciles":{"Gain less than 5%":[0,0,0,0,0,0,0,0,0,0],"Gain more than 5%":[0,0,0,0,0,0,0,0,0,0],"Lose less than 5%":[0,0,0.046718145693541956,0.08731232398246182,0.06660852835258829,0.0900907293248934,0.4170458554776085,0.517634721061584,0.24415293326132875,0.32888324536549807],"Lose more than 5%":[0,0,0.00007461838979842656,0.021396340483072773,0.062090382181393074,0.06832457433028814,0.07184288385747563,0.2806991056811786,0.6680707032678792,0.6276538623837933],"No change":[1,1,0.9532072359166596,0.8912913355344654,0.8713010894660186,0.8415846963448185,0.5111112606649159,0.20166617325723737,0.08777636347079204,0.04346289225070866]}}
+
+  This JSON describes the average and relative changes to income by each income decile: {"average":{"1":0,"2":0,"3":-24.24599409109219,"4":-253.0231205093555,"5":-475.3558603832568,"6":-631.4512906041498,"7":-922.0454283106875,"8":-2326.8960960914874,"9":-4946.518476653714,"10":-7130.795782266137},"relative":{"1":0,"2":0,"3":-0.0005222042388976342,"4":-0.004369881912854441,"5":-0.006767954199576805,"6":-0.00748504084296438,"7":-0.009077815293829495,"8":-0.018937526613161053,"9":-0.031523169250545484,"10":-0.023821328289961217}}
+
+  This JSON describes the baseline and reform poverty rates by age group (describe the relative changes): {"adult":{"baseline":0.09166468000291336,"reform":0.09166468000291336},"all":{"baseline":0.0876944674623585,"reform":0.0876944674623585},"child":{"baseline":0.07416010162929562,"reform":0.07416010162929562},"senior":{"baseline":0.09066999905037601,"reform":0.09066999905037601}}
+
+  This JSON describes the baseline and reform deep poverty rates by age group (describe the relative changes): {"adult":{"baseline":0.03536147772140058,"reform":0.03536147772140058},"all":{"baseline":0.02905903456992908,"reform":0.02905903456992908},"child":{"baseline":0.019619705442419918,"reform":0.019619705442419918},"senior":{"baseline":0.019606172202674407,"reform":0.019606172202674407}}
+
+  This JSON describes the baseline and reform poverty and deep poverty rates by gender (briefly describe the relative changes): {"deep_poverty":{"female":{"baseline":0.02979143939697257,"reform":0.02979143939697257},"male":{"baseline":0.028289173292029256,"reform":0.028289173292029256}},"poverty":{"female":{"baseline":0.09224772581187599,"reform":0.09224772581187599},"male":{"baseline":0.08290834759785978,"reform":0.08290834759785978}}}
+
+  This JSON describes the baseline and reform poverty impacts by racial group (briefly describe the relative changes): {"black":{"baseline":0.13618166870476428,"reform":0.13618166870476428},"hispanic":{"baseline":0.12587635648522133,"reform":0.12587635648522133},"other":{"baseline":0.08940217373977977,"reform":0.08940217373977977},"white":{"baseline":0.065474029587709,"reform":0.065474029587709}}
+
+  This JSON describes three inequality metrics in the baseline and reform, the Gini coefficient of income inequality, the share of income held by the top 10% of households and the share held by the top 1% (describe the relative changes): {"gini":{"baseline":0.3907000685358982,"reform":0.385289762376931},"top_10_pct_share":{"baseline":0.2985176332739786,"reform":0.2954760501595156},"top_1_pct_share":{"baseline":0.06908656779324443,"reform":0.06939115703238746}}
+  
+  Write this for a policy analyst who knows a bit about economics and policy.

@@ -11,21 +11,26 @@ The fiscal cost of each reform is given in the following table:
 
 {{ fiscals.to_string(index=False) }}
 
+In your answers please quote these to the nearest million dollars.
 
-The following long format table describes the mean weekly income change of the households
-that would gain and lose from the reforms.  The population of winning and 
-losing households are also given.  Households are grouped by equivalised disposable 
-income decile and they are also separated into households with and without children. 
+
+The following tables, one for each reform, describe the mean weekly income change 
+of the households that would gain and lose from the reforms, as well as the 
+overall mean weekly change for the group.  The populations of winning and losing 
+households are also given as well as the total populations of each group.  
+Households are grouped by equivalised disposable income decile. 
 Values of "S" mean that the Population counts were so low that the values were 
-suppressed for confidentiality
+suppressed for confidentiality.
 
-{{ wnl.to_string(index=False) }}
+{% for scenario in wnl_wide.Scenario.unique() %}
+    {{ scenario }} winners and losers table:
+    {{ wnl_wide[wnl_wide.Scenario==scenario].drop('Scenario', axis=1).to_string(index=False) }}
+{% endfor %}
 
-The following long format table describes the change in the number of children living
-in two income based measures of poverty:  The fixed-line AHC50, and the moving-line 
-BHC50 poverty measures.
+The following table describes the change in the number of children living
+in two income based measures of poverty:  The fixed-line after housing costs AHC50 (Fixed_AHC), and the moving-line 
+before housing costs BHC50 (BHC) poverty measures.
 
-{{ poverty.to_string(index=False) }}
+{{ poverty_wide.to_string(index=True) }}
 
-In all tables the "Margin_Of_Error" column gives the 95% confidence interval of 
-the estimate.
+

@@ -1,0 +1,134 @@
+You are wise and helpful.
+
+-----------------------------------------
+
+You will be asked questions that relate to microsimulation output for several hypothetical
+reforms to New Zealand's tax and transfer system in the 2022
+tax year. Your role will be to act as a chatbot and reply concisely.
+
+The reform scenarios are described in the following python dictionary:
+
+{'FTC5a42.7k25': 'Increase the Family Tax Credit (FTC) rate for the eldest child by 5 dollars per week, maintain the current abatement threshold at 42,700 dollars, and keep the abatement rate at 25%', 'FTC5a42.7k26': 'Increase FTC rate by 5 dollars per week and increase abatement rate to 26%', 'FTC5a42.7k27': 'Increase FTC rate by 5 dollars per week and increase abatement rate to 27%', 'FTC7.5a42.7k27': 'Increase FTC rate by 7.5 dollars per week and increase abatement rate to 27%', 'FTC7.5a42.7k28': 'Increase FTC rate by 7.5 dollars per week and increase abatement rate to 28%'}
+
+
+The fiscal cost of each reform is given in the following table:
+
+      Scenario     Value
+  FTC5a42.7k25 157755000
+  FTC5a42.7k26 111328000
+  FTC5a42.7k27  67875000
+FTC7.5a42.7k27 145199000
+FTC7.5a42.7k28 102888000
+
+In your answers please quote these to the nearest million dollars.
+
+
+The following tables, one for each reform, describe the mean weekly income change 
+of the households that would gain and lose from the reforms, as well as the 
+overall mean weekly change for the group.  The populations of winning and losing 
+households are also given as well as the total populations of each group.  
+Households are grouped by equivalised disposable income decile. 
+Values of "S" mean that the Population counts were so low that the values were 
+suppressed for confidentiality.
+
+
+    FTC5a42.7k25 winners and losers table:
+    Eq_DI_Quantile Winners_Mean_Weekly_Change Winners_Population_In_Category Losers_Mean_Weekly_Change Losers_Population_In_Category All_Mean_Weekly_Change All_Population_In_Category
+             1                         11                          52000                         S                             S                      3                     185000
+             2                         10                          34000                         S                             S                      2                     185000
+             3                         10                          78000                         S                             S                      4                     185000
+             4                         10                          82000                         S                             S                      4                     185000
+             5                          8                          34000                         S                             S                      2                     185000
+             6                          7                          19000                         S                             S                      1                     185000
+             7                          7                          10000                         S                             S                      0                     185000
+             8                          7                           4000                         S                             S                      0                     185000
+             9                          S                              S                         S                             S                      0                     185000
+            10                          S                              S                         S                             S                      0                     185000
+           All                         10                         316000                         S                             S                      2                    1848000
+
+    FTC5a42.7k26 winners and losers table:
+    Eq_DI_Quantile Winners_Mean_Weekly_Change Winners_Population_In_Category Losers_Mean_Weekly_Change Losers_Population_In_Category All_Mean_Weekly_Change All_Population_In_Category
+             1                         10                          52000                         S                             S                      3                     185000
+             2                          9                          33000                         S                             S                      2                     185000
+             3                          8                          75000                        -1                          3000                      3                     185000
+             4                          6                          69000                        -1                         12000                      2                     185000
+             5                          5                          29000                        -1                          5000                      1                     185000
+             6                          5                          15000                        -1                          3000                      0                     185000
+             7                          5                           8000                         S                             S                      0                     185000
+             8                          6                           3000                         S                             S                      0                     185000
+             9                          S                              S                         S                             S                      0                     185000
+            10                          S                              S                         S                             S                      0                     185000
+           All                          8                         287000                        -1                         26000                      1                    1848000
+
+    FTC5a42.7k27 winners and losers table:
+    Eq_DI_Quantile Winners_Mean_Weekly_Change Winners_Population_In_Category Losers_Mean_Weekly_Change Losers_Population_In_Category All_Mean_Weekly_Change All_Population_In_Category
+             1                         10                          51000                         S                             S                      3                     185000
+             2                          9                          32000                         S                             S                      2                     185000
+             3                          8                          62000                        -5                         15000                      2                     185000
+             4                          8                          37000                        -6                         44000                      0                     185000
+             5                          6                          19000                        -6                         15000                      0                     185000
+             6                          5                          11000                        -6                          8000                      0                     185000
+             7                          5                           6000                        -5                          3000                      0                     185000
+             8                          S                              S                         S                             S                      0                     185000
+             9                          S                              S                         S                             S                      0                     185000
+            10                          S                              S                         S                             S                      0                     185000
+           All                          8                         223000                        -6                         89000                      1                    1848000
+
+    FTC7.5a42.7k27 winners and losers table:
+    Eq_DI_Quantile Winners_Mean_Weekly_Change Winners_Population_In_Category Losers_Mean_Weekly_Change Losers_Population_In_Category All_Mean_Weekly_Change All_Population_In_Category
+             1                         16                          52000                         S                             S                      4                     185000
+             2                         14                          33000                         S                             S                      2                     185000
+             3                         12                          70000                        -3                          8000                      4                     185000
+             4                         10                          50000                        -3                         31000                      2                     185000
+             5                          8                          24000                        -4                         10000                      1                     185000
+             6                          7                          13000                        -4                          5000                      0                     185000
+             7                          7                           8000                         S                             S                      0                     185000
+             8                          S                              S                         S                             S                      0                     185000
+             9                          S                              S                         S                             S                      0                     185000
+            10                          S                              S                         S                             S                      0                     185000
+           All                         12                         254000                        -3                         59000                      2                    1848000
+
+    FTC7.5a42.7k28 winners and losers table:
+    Eq_DI_Quantile Winners_Mean_Weekly_Change Winners_Population_In_Category Losers_Mean_Weekly_Change Losers_Population_In_Category All_Mean_Weekly_Change All_Population_In_Category
+             1                         16                          51000                         S                             S                      4                     185000
+             2                         13                          32000                         S                             S                      2                     185000
+             3                         12                          62000                        -7                         15000                      3                     185000
+             4                         11                          37000                        -9                         44000                      0                     185000
+             5                          9                          19000                        -8                         15000                      0                     185000
+             6                          8                          11000                        -9                          8000                      0                     185000
+             7                          8                           6000                        -7                          3000                      0                     185000
+             8                          S                              S                         S                             S                      0                     185000
+             9                          S                              S                         S                             S                      0                     185000
+            10                          S                              S                         S                             S                      0                     185000
+           All                         12                         223000                        -8                         89000                      1                    1848000
+
+
+The following table describes the change in the number of children living
+in two income based measures of poverty:  The fixed-line after housing costs AHC50 (Fixed_AHC), and the moving-line 
+before housing costs BHC50 (BHC) poverty measures.
+
+Poverty_Type      BHC Fixed_AHC
+Scenario                       
+FTC5a42.7k25    -5000     -9000
+FTC5a42.7k26    -5000     -9000
+FTC5a42.7k27    -5000     -8000
+FTC7.5a42.7k27  -7000    -11000
+FTC7.5a42.7k28  -7000    -10000
+
+
+
+-----------------------------------------
+
+From a value for money perspective, which reform best supports low income households?
+
+-----------------------------------------
+
+The best reform to support low income households from a value for money perspective appears to be FTC7.5a42.7k27. This is because it has the second highest fiscal cost of 145 million dollars but is noticeably more effective at reducing poverty. It reduces BHC by 7000 and AHC50 Fixed by 11000, which are the highest reductions among all reforms. It also leads to the highest mean weekly increase for the poorest households (16 dollars for 1st quantile) while only slightly causing losers in the higher quantiles. Its overall mean weekly change is also quite high at 2 dollars. So it seems to provide the most substantial support for lower-income groups with relatively considerable cost.
+
+-----------------------------------------
+
+which reform is the most tightly targeted to low incomes?
+
+-----------------------------------------
+
+The reform that appears to be most tightly targeted to low incomes is FTC5a42.7k27. The mean weekly income change for winning households in quantile 1 (lowest income) is 10 dollars and it gradually decreases to 5 dollars for quantile 6. This reform also starts introducing losers from quantile 3 onwards with the losers mean weekly change incrementally worsening as we move up income quantiles. The fiscal cost of this reform is also significantly lower at 68 million dollars. This indicates that this reform is offering a more focused support to lower-income households while also drawing back support from higher-income ones. Therefore, it could be seen as more tightly targeted to low incomes.
