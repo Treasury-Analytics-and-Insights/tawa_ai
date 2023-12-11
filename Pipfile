@@ -12,6 +12,7 @@ tinydb = "*"
 jinja2 = "*"
 pyaml = "*"
 tiktoken = "*"
+panel = "*"
 
 [dev-packages]
 ipykernel = "*"
