@@ -8,12 +8,11 @@ on your system, follow the instructions here: https://pipenv.readthedocs.io/en/l
 
 Once pipenv is installed, you can install the dependencies for this project by running:
 ```pipenv install```
-```
 from the root directory of this project.  This will create a virtual environment
 and install all the dependencies.  One of the dependencies is the aipy package
 which currently is installed from source.  You'll need to clone this from DevOps
 and modify the Pipfile to point to the location of the aipy work directory.
-```
+
 
 # Running the ChatBot
 
