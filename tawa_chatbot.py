@@ -16,7 +16,22 @@ pn.extension()
 
 MAX_TOKENS = 8000
 
+def load_tawa_file(path):
+    values = pd.read_excel(path, sheet_name='Values')
+    quantiles = pd.read_excel(path, sheet_name='Quantiles')
+    # remove Quantile column
+    quantiles.drop(columns='Quantile', inplace=True)
+    descriptors = pd.read_excel(path, sheet_name='Descriptors')
 
+    # row append the values and quantiles dataframes and merge with descriptors by Index
+    tawa = pd.concat([values, quantiles], axis=0).merge(
+        descriptors, on='Index', how='left')
+
+    # sort by Index
+    tawa.sort_values(by='Index', inplace=True)
+    tawa.drop(columns='Index', inplace=True)
+    tawa.reset_index(drop=True, inplace=True)
+    return tawa
 
 def update_status(event):
     if details_input.details is not None and data_input.fiscals is not None:
@@ -57,7 +72,7 @@ class TawaDetailsInput:
 
 class TawaDataInput:
     def __init__(self):
-        self.data_input = pn.widgets.FileInput(name='Data input: ', accept='.csv')
+        self.data_input = pn.widgets.FileInput(name='Data input: ', accept='.xlsx')
         self.data_input.param.watch(self._update_data, 'value')
         self.data_input.param.watch(update_status, 'value')
         self.fiscals = None
@@ -66,9 +81,9 @@ class TawaDataInput:
 
     def _update_data(self, event):
         file = io.BytesIO(self.data_input.value) 
-        data = pd.read_csv(file)
+        data = load_tawa_file(file)
 
-        data.drop(columns=['Name', 'Rounding_Rule', 'Population'], inplace=True)
+        data.drop(columns=['Rounding_Rule', 'Population'], inplace=True)
         self.fiscals = data[
             (data.Topic == 'Fiscals') & (data.Variable == 'Disposable_Income')][
                 ['Scenario', 'Value']]
