@@ -66,8 +66,8 @@ class TawaDetailsInput:
         self.details = None
 
     def _update_details(self, event):
-        with open(self.details_input.filename) as f:
-            self.details = yaml.load(f, Loader=yaml.FullLoader)
+        file = io.BytesIO(self.details_input.value) 
+        self.details = yaml.load(file, Loader=yaml.FullLoader)
 
 
 class TawaDataInput:
