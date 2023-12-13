@@ -13,6 +13,8 @@ jinja2 = "*"
 pyaml = "*"
 tiktoken = "*"
 panel = "*"
+openpyxl = "*"
+
 
 [dev-packages]
 ipykernel = "*"
